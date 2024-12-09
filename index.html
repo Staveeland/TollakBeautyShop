@@ -20,6 +20,26 @@
         </nav>
     </header>
 
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>Your Cart</h2>
+                <button class="close-cart">&times;</button>
+            </div>
+            <div class="cart-items">
+                <!-- Cart items will be dynamically added here -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span class="total-amount">$0.00</span>
+                </div>
+                <button class="checkout-button">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
     <main>
         <section id="hero" class="home-hero">
             <div class="hero-content">
@@ -53,7 +73,7 @@
         </section>
 
         <section id="featured">
-            <h2>Featured Products</h2>
+            <h2 class="section-header">Featured Products</h2>
             <div class="featured-product">
                 <div class="featured-image">
                     <img src="https://via.placeholder.com/600x400" alt="Radiant Facial Serum">
@@ -67,7 +87,7 @@
         </section>
 
         <section id="testimonials">
-            <h2>What Our Customers Say</h2>
+            <h2 class="section-header">What Our Customers Say</h2>
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <p>"I've never experienced skincare like this before. My skin feels amazing!"</p>

@@ -20,64 +20,108 @@
         </nav>
     </header>
 
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>Your Cart</h2>
+                <button class="close-cart">&times;</button>
+            </div>
+            <div class="cart-items">
+                <!-- Cart items will be dynamically added here -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span class="total-amount">$0.00</span>
+                </div>
+                <button class="checkout-button">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
     <main>
         <section id="products-header">
             <h1>Our Products</h1>
-            <p>Discover our collection of premium Norwegian skincare products</p>
+            <p>Discover our collection of premium Norwegian beauty products</p>
+            <div class="search-container">
+                <input type="text" id="product-search" placeholder="Search products..." autocomplete="off">
+                <button class="search-button">
+                    <span class="search-icon">🔍</span>
+                </button>
+                <div class="search-suggestions">
+                    <div class="recent-searches">
+                        <h4>Recent Searches</h4>
+                        <div class="recent-searches-list"></div>
+                    </div>
+                    <div class="suggested-products">
+                        <h4>Suggested Products</h4>
+                        <div class="suggested-products-list"></div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="products">
-            <div class="product-filters">
-                <button class="filter-button active">All Products</button>
-                <button class="filter-button">Serums</button>
-                <button class="filter-button">Moisturizers</button>
-                <button class="filter-button">Masks</button>
-            </div>
+        <div class="product-filters">
+            <button class="filter-button active" data-filter="all">All Products</button>
+            <button class="filter-button" data-filter="face">Face Care</button>
+            <button class="filter-button" data-filter="body">Body Care</button>
+            <button class="filter-button" data-filter="hair">Hair Care</button>
+        </div>
 
+        <section id="products">
             <div class="product-grid">
-                <div class="product-card">
-                    <div class="product-badge">Bestseller</div>
-                    <img src="https://via.placeholder.com/300x300" alt="Facial Serum">
+                <div class="product-card" data-category="face">
+                    <span class="product-badge">Bestseller</span>
+                    <img src="https://via.placeholder.com/300x300" alt="Radiant Facial Serum">
                     <h3>Radiant Facial Serum</h3>
-                    <p class="product-description">Brightening and nourishing serum with Arctic botanicals</p>
-                    <p class="product-price">$49.99</p>
+                    <p class="product-description">Enriched with Arctic botanicals and vitamin C</p>
+                    <p class="product-price">$89.99</p>
+                    <div class="product-quantity">
+                        <button class="quantity-btn minus">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="10">
+                        <button class="quantity-btn plus">+</button>
+                    </div>
                     <button class="add-to-cart">Add to Cart</button>
                 </div>
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/300x300" alt="Moisturizer">
+
+                <div class="product-card" data-category="face">
+                    <img src="https://via.placeholder.com/300x300" alt="Hydrating Moisturizer">
                     <h3>Hydrating Moisturizer</h3>
-                    <p class="product-description">Deep hydration with glacier water and mountain flowers</p>
-                    <p class="product-price">$39.99</p>
+                    <p class="product-description">24-hour hydration with glacier water</p>
+                    <p class="product-price">$64.99</p>
+                    <div class="product-quantity">
+                        <button class="quantity-btn minus">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="10">
+                        <button class="quantity-btn plus">+</button>
+                    </div>
                     <button class="add-to-cart">Add to Cart</button>
                 </div>
-                <div class="product-card">
-                    <div class="product-badge">New</div>
-                    <img src="https://via.placeholder.com/300x300" alt="Face Mask">
-                    <h3>Rejuvenating Face Mask</h3>
-                    <p class="product-description">Revitalizing mask with pine bark and sea kelp</p>
-                    <p class="product-price">$29.99</p>
+
+                <div class="product-card" data-category="body">
+                    <span class="product-badge">New</span>
+                    <img src="https://via.placeholder.com/300x300" alt="Body Renewal Oil">
+                    <h3>Body Renewal Oil</h3>
+                    <p class="product-description">Nourishing blend of Nordic oils</p>
+                    <p class="product-price">$54.99</p>
+                    <div class="product-quantity">
+                        <button class="quantity-btn minus">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="10">
+                        <button class="quantity-btn plus">+</button>
+                    </div>
                     <button class="add-to-cart">Add to Cart</button>
                 </div>
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/300x300" alt="Night Cream">
-                    <h3>Restorative Night Cream</h3>
-                    <p class="product-description">Overnight repair with Nordic berry complex</p>
-                    <p class="product-price">$45.99</p>
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/300x300" alt="Eye Cream">
-                    <h3>Illuminating Eye Cream</h3>
-                    <p class="product-description">Brightening eye care with Arctic algae</p>
+
+                <div class="product-card" data-category="hair">
+                    <img src="https://via.placeholder.com/300x300" alt="Strengthening Shampoo">
+                    <h3>Strengthening Shampoo</h3>
+                    <p class="product-description">With sea minerals and kelp extract</p>
                     <p class="product-price">$34.99</p>
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
-                <div class="product-card">
-                    <div class="product-badge">Limited</div>
-                    <img src="https://via.placeholder.com/300x300" alt="Treatment Oil">
-                    <h3>Nordic Glow Oil</h3>
-                    <p class="product-description">Luxurious facial oil with rare Nordic ingredients</p>
-                    <p class="product-price">$59.99</p>
+                    <div class="product-quantity">
+                        <button class="quantity-btn minus">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="10">
+                        <button class="quantity-btn plus">+</button>
+                    </div>
                     <button class="add-to-cart">Add to Cart</button>
                 </div>
             </div>

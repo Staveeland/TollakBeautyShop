@@ -12,13 +12,33 @@
             <div class="logo">Tollak Beauty Shop</div>
             <div class="nav-links">
                 <a href="index.html">Home</a>
-                <a href="index.html#products">Products</a>
+                <a href="products.html">Products</a>
                 <a href="about.html">About</a>
                 <a href="blog.html">Blog</a>
                 <a href="#cart" class="cart-icon">🛒 Cart</a>
             </div>
         </nav>
     </header>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>Your Cart</h2>
+                <button class="close-cart">&times;</button>
+            </div>
+            <div class="cart-items">
+                <!-- Cart items will be dynamically added here -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span class="total-amount">$0.00</span>
+                </div>
+                <button class="checkout-button">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
 
     <main>
         <section id="about">
